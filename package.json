@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build":"npm run build --prefix couples & npm run build --prefix vendor",
-    "heroku-postbuild": "npm run build & npm run dev",
+    "heroku-postbuild": "npm install --prefix couples && npm install --prefix vendor && npm run build && npm run dev",
     "dev":"nodemon server.js"
   },
   "author": "",
